@@ -11,33 +11,33 @@
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
             <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong> consequuntur quae</p>
+              <i class="{{ $facts[0]->icon}}"></i>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $facts[0]->title}}" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>{{ $facts[0]->boldtext}}</strong> {{ $facts[0]->text}}</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+              <i class="{{ $facts[1]->icon}}"></i>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $facts[1]->title}}" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>{{ $facts[1]->boldtext}}</strong> {{ $facts[1]->text}}</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+              <i class="{{ $facts[2]->icon}}"></i>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $facts[2]->title}}" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>{{ $facts[2]->boldtext}}</strong> {{ $facts[2]->text}}</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
+              <i class="{{ $facts[3]->icon}}"></i>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $facts[3]->title}}" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>{{ $facts[3]->boldtext}}</strong> {{ $facts[3]->text}}</p>
             </div>
           </div>
 

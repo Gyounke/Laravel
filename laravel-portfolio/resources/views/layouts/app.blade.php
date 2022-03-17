@@ -19,9 +19,9 @@
   <!-- Vendor CSS Files -->
   <link href="{{ asset("css/aos.css") }}" rel="stylesheet">
   <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
-  <link href="{{ asset("css/bootstrap-icons.css") }}" rel="stylesheet">
-  <link href="{{ asset("ccs/boxicons/boxicons.min.css") }}" rel="stylesheet">
-  <link href="{{ asset("css/glightbox/glightbox.min.css") }}" rel="stylesheet">
+  <link href="{{ asset("css/bootstrap-icons/bootstrap-icons.css") }}" rel="stylesheet">
+  <link href="{{ asset("css/boxicons/css/boxicons.min.css") }}" rel="stylesheet">
+  <link href="{{ asset("css/glightbox/css/glightbox.min.css") }}" rel="stylesheet">
   <link href="{{ asset("css/swiper/swiper-bundle.min.css") }}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
@@ -40,8 +40,8 @@
 
 <body>
     @yield('content')
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
+    <script src="{{ asset("js/app.js") }}"></script>
+
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -55,4 +55,8 @@
   <script src="{{ asset("js/waypoints/noframework.waypoints.js") }}"></script>
   <script src="{{ asset("js/php-email-form/validate.js") }}"></script>
 
+   <!-- Template Main JS File -->
+   <script src="{{ asset("js/main.js") }}"></script>
+
+  </body>
 </html>
