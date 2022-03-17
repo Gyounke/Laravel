@@ -56,7 +56,7 @@ class PortfolioSeeder extends Seeder
         ]);
 
         DB::table('portfolios')->insert([
-            'imgpath' => 'img/portfolio/portfolio-9.jpg',
+            'imgpath' => 'portfolio-9.jpg',
             'tag' => 'filter-web',
         ]);
     }

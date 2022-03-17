@@ -19,7 +19,7 @@
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item {{$portfolios[0]->tag}}">
                 <div class="portfolio-wrap">
                     <img src={{ asset("img/portfolio/".$portfolios[0]->imgpath) }} class="img-fluid" alt="">
                     <div class="portfolio-links">
@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="col-lg-4 col-md-6 portfolio-item {{$portfolios[1]->tag}}">
                 <div class="portfolio-wrap">
                     <img src={{ asset("img/portfolio/".$portfolios[1]->imgpath) }} class="img-fluid" alt="">
                     <div class="portfolio-links">
@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item {{$portfolios[2]->tag}}">
                 <div class="portfolio-wrap">
                     <img src={{ asset("img/portfolio/".$portfolios[2]->imgpath) }} class="img-fluid" alt="">
                     <div class="portfolio-links">
@@ -49,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="col-lg-4 col-md-6 portfolio-item {{$portfolios[3]->tag}}">
                 <div class="portfolio-wrap">
                     <img src={{ asset("img/portfolio/".$portfolios[3]->imgpath) }} class="img-fluid" alt="">
                     <div class="portfolio-links">
@@ -59,7 +59,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="col-lg-4 col-md-6 portfolio-item {{$portfolios[4]->tag}}">
                 <div class="portfolio-wrap">
                     <img src={{ asset("img/portfolio/".$portfolios[4]->imgpath) }} class="img-fluid" alt="">
                     <div class="portfolio-links">
@@ -69,7 +69,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item {{$portfolios[5]->tag}}">
                 <div class="portfolio-wrap">
                     <img src={{ asset("img/portfolio/".$portfolios[5]->imgpath) }} class="img-fluid" alt="">
                     <div class="portfolio-links">
@@ -79,7 +79,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="col-lg-4 col-md-6 portfolio-item {{$portfolios[6]->tag}}">
                 <div class="portfolio-wrap">
                     <img src={{ asset("img/portfolio/".$portfolios[6]->imgpath) }} class="img-fluid" alt="">
                     <div class="portfolio-links">
@@ -89,7 +89,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="col-lg-4 col-md-6 portfolio-item {{$portfolios[7]->tag}}">
                 <div class="portfolio-wrap">
                     <img src={{ asset("img/portfolio/".$portfolios[7]->imgpath) }} class="img-fluid" alt="">
                     <div class="portfolio-links">
@@ -99,7 +99,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="col-lg-4 col-md-6 portfolio-item {{$portfolios[8]->tag}}">
                 <div class="portfolio-wrap">
                     <img src={{ asset("img/portfolio/".$portfolios[8]->imgpath) }} class="img-fluid" alt="">
                     <div class="portfolio-links">
