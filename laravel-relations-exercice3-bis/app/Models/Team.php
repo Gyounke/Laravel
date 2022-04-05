@@ -9,4 +9,10 @@ class Team extends Model
 {
     use HasFactory;
     protected $table = "photos";
+
+    public function players()
+
+    {
+        return $this->hasMany(Player::class);
+    }
 }
