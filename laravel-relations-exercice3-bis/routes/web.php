@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controller\TeamController;
+use App\Http\Controller\PlayerController;
+use App\Models\Team;
+use App\Models\Player;
 use Illuminate\Support\Facades\Route;
+use PhpParser\Node\Expr\BinaryOp\Equal;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +19,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $teams = Team::all();
+    $players = Team::all();
+    return view('welcome', compact("teams", "players"));
 });
+
+Route::resource("/back/team", TeamController::class);
+Route::resource("back/player", PlayerController::class);

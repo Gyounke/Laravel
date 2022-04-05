@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('src');
+            $table->string('img');
+            $table->foreignId('player_id')->constrained("players", "id")->onDelete("cascade")->onUpdate("cascade");
             $table->timestamps();
         });
     }

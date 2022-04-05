@@ -21,7 +21,7 @@ class TeamFactory extends Factory
 
         return [
             "name" => "Team " . $nomEquipe,
-            "contry" => $this->faker->country(),
+            "country" => $this->faker->country(),
             "continent" => $this->faker->randomElement(["EU", "HEU"]),
             "attack" => 2,
             "center" => 2,

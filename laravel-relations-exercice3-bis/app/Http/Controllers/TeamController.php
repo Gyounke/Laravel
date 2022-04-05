@@ -10,7 +10,7 @@ class TeamController extends Controller
     public function index()
     {
         $teams = Team::where("id", "!=", 1)->get();
-        return view("back.teams;all", compact("teams"));
+        return view("back.teams.all", compact("teams"));
     }
 
     public function create()

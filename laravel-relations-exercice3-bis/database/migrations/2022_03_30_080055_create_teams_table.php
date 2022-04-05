@@ -16,9 +16,12 @@ return new class extends Migration
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('city');
             $table->string('country');
-            $table->integer('size');
+            $table->string('continent');
+            $table->integer('attack');
+            $table->integer('center');
+            $table->integer('defense');
+            $table->integer('replacment');
             $table->timestamps();
         });
     }
