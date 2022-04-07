@@ -15,9 +15,17 @@
                         <li class="scroll-to-section"><a href="#services">Services</a></li>
                         <li class="scroll-to-section"><a href="#courses">Courses</a></li>
                         <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li> 
-                        <li class="scroll-to-section"><a href="#contact-section">Contact Us</a></li>                        
-                        <li class="scroll-to-section"><a href="#contact-section">Login</a></li>
-                        <li class="scroll-to-section"><a href="#contact-section">Register</a></li> 
+                        <li class="scroll-to-section"><a href="#contact-section">Contact Us</a></li>
+                        @if (Route::has('login'))
+                            @auth
+                                <li class="scroll-to-section"><a href="{{ url('/dashboard') }}">Dashboard</a></li>
+                            @else                        
+                                <li class="scroll-to-section"><a href="{{ route('login') }}">Login</a></li>
+                                @if (Route::has('register'))
+                                    <li class="scroll-to-section"><a href="{{ route('register') }}">Register</a></li>
+                                @endif
+                            @endauth
+                        @endif 
                     </ul>        
                     <a class='menu-trigger'>
                         <span>Menu</span>
