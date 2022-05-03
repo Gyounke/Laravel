@@ -22,3 +22,11 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+
+Route::middleware(['auth'])->group(function () {
+Route::get('/back/users', [UserController::class, 'index'])->name('users.index');
+Route::get('back/users/{id}/read', [UserController::class, 'read'])->name('users.read');
+Route::get('back/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
+Route::post('back/users/{id}/update', [UserController::class, 'update'])->name('users.update');
+});
