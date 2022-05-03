@@ -24,6 +24,7 @@ class UserSeeder extends Seeder
             'email' => "coquinou@hotmail.com", 
             'password' => Hash::make('123456'),
             'status' => 1,
+            'photo_id' => 1,
         ]);
     }
 }

@@ -6,10 +6,13 @@ use App\Models\Title;
 use App\Models\Banner;
 use App\Models\Service;
 use App\Models\Map;
+use App\Models\Testimonial;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\TitleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\MapController;
+use App\Http\Controllers\TestimonialController;
 
 
 /*
@@ -28,8 +31,9 @@ Route::get('/', function () {
     $titles = Title::all();
     $banners = Banner::all();
     $services = Service::all();
+    $testimonials = Testimonial::all();
     $maps = Map::all();
-    return view('welcome', compact("banners","users","titles","services","maps"));
+    return view('welcome', compact("banners","users","titles","services","maps","testimonials"));
 });
 
 Route::get('/dashboard', function () {
@@ -61,6 +65,9 @@ Route::post('/back/titles/{id}/update', [TitleController::class, 'update'])->nam
 
 // Services
 Route::resource('/back/services', ServiceController::class );
+
+// Testimonials
+Route::resource('/back/testimonials', TestimonialController::class );
 
 // Maps
 Route::get('/back/maps', [MapController::class, 'index'])->name('maps.index');
