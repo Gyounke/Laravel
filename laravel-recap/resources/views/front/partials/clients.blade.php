@@ -1,4 +1,4 @@
-<div id="clients" class="the-clients">
+<div id="clients" class="the-clients section">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
@@ -15,14 +15,15 @@
                 <div class="col-lg-7 align-self-center">
                   <div class="menu">
                     <div class="first-thumb active">
+                    @foreach ($testimonials as $item)
                       <div class="thumb">
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>David Martino Co</h4>
-                            <span class="date">30 November 2021</span>
+                            <h4>{{$item->name}}</h4>
+                            <span class="date">{{$item->date}}</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Financial Apps</span>
+                            <span class="category">{{$item->role}}</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 col-12">
                               <i class="fa fa-star"></i>
@@ -30,94 +31,11 @@
                               <i class="fa fa-star"></i>
                               <i class="fa fa-star"></i>
                               <i class="fa fa-star"></i>
-                              <span class="rating">4.8</span>
+                              <span class="rating">{{$item->rating}}</span>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>Jake Harris Nyo</h4>
-                            <span class="date">29 November 2021</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Digital Business</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.5</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>May Catherina</h4>
-                            <span class="date">27 November 2021</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Business &amp; Economics</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.7</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>Random User</h4>
-                            <span class="date">24 November 2021</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">New App Ecosystem</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">3.9</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="last-thumb">
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>Mark Amber Do</h4>
-                            <span class="date">21 November 2021</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Web Development</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.3</span>
-                          </div>
-                        </div>
-                      </div>
+                      @endforeach
                     </div>
                   </div>
                 </div> 

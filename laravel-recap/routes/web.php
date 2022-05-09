@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TestimonialController;
+use App\Models\Service;
+use App\Models\Testimonial;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $services = Service::all();
+    $testimonials = testimonial::all();
+    return view('welcome', compact('services','testimonials'));
 });

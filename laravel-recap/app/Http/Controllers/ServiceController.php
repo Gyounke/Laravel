@@ -4,82 +4,62 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ServiceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
+    
     public function index()
     {
-        //
+        $services = Service::all();
+        return view("/back/services/all",compact("services"));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
     public function show(Service $service)
     {
-        //
+        return view("/back/services/show",compact("service"));
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Service $service)
     {
-        //
+        $services = Service::all();
+        return view("/back/services/edit",compact("service", "services"));
+    }
+    public function update(Service $service, Request $request)
+    {
+        $this->authorize('update', $service);
+        $service->icon = $request->icon;
+        $service->title = $request->title;
+        $service->description = $request->description;
+        $service->updated_at = now();
+        $service->save();
+        return redirect()->route("services.index")->with('message', "Service updated");
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Service $service)
-    {
-        //
+    public function destroy(Service $service){
+        $this->authorize('delete', $service);
+        $service->delete();
+        return redirect()->back()->with('message', 'Service destroyed');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Service $service)
-    {
-        //
+    public function create(){
+        $service = Service::all();
+        return view("back.services.create", compact("service"));
+    }
+
+    public function store(Request $request){
+        
+        $this->authorize('create', Service::class);
+        $service = new Service;
+        $validated = $request->validate([
+            'title' => 'required',
+            'icon' => 'required',
+            'description' => 'required',
+        ]);
+        $service->icon = $request->icon;
+        $service->title = $request->title;
+        $service->description = $request->description;
+        $service->updated_at = now();
+        $service->save();
+        return redirect()->route("services.index")->with('message', 'Service created');
     }
 }
