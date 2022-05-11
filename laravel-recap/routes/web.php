@@ -4,9 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TestimonialController;
 use App\http\Controllers\UserController;
+use App\Http\Controllers\BannerController;
 use App\Models\Service;
 use App\Models\Testimonial;
 use App\Models\User;
+use App\Models\Banner;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +24,8 @@ Route::get('/', function () {
     $services = Service::all();
     $testimonials = Testimonial::all();
     $users = User::all();
-    return view('welcome', compact("services","testimonials","users"));
+    $banners = Banner::all();
+    return view('welcome', compact("services","testimonials","users","banners"));
 });
 
 Route::get('/dashboard', function () {
@@ -64,5 +67,10 @@ route::middleware(['auth'])->group(function () {
     Route::post('/back/users/store', [UserController::class, 'store'])->name('users.store');
     Route::get('/back/users/{id}/show', [UserController::class, 'show'])->name('users.show');
 
+    // Banners
+    Route::get('/back/banners', [BannerController::class, 'index'])->name('banners.index');
+    Route::get('/back/banners/{id}/read', [BannerController::class, 'read'])->name('banners.read');
+    Route::get('/back/banners/{id}/edit', [BannerController::class, 'edit'])->name('banners.edit');
+    Route::post('/back/banners/{id}/update', [BannerController::class, 'update'])->name('banners.update');
 
 });

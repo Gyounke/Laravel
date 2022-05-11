@@ -55,6 +55,13 @@
        </a>
        <span class="tooltip">Users</span>
      </li>
+     <li>
+      <a href="{{ route('banners.index') }}">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Banners</span>
+       </a>
+       <span class="tooltip">Banners</span>
+     </li>
      <li class="profile">
          <div class="profile-details">
            <!--<img src="profile.jpg" alt="profileImg">-->

@@ -18,7 +18,7 @@
         
           <div class="service-item first-service">
           
-            <div class="icon"></div>
+            <div class="w-25 h-25"><img src="{{ "assets/images/" . $item->icon }}" alt=""></div>
             <h4>{{ $item->title }}</h4>
             <p>{{ $item->description }}</p>
             <div class="text-button">
