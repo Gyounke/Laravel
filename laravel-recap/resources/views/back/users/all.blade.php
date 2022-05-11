@@ -20,7 +20,13 @@
             <thead>
                 <tr>
                     <th scope='col'>#</th>
-                    <th scope='col'>Action</th>
+                    <th scope='col'>lastname</th>
+                    <th scope='col'>firstname</th>
+                    <th scope='col'>age</th>
+                    <th scope='col'>address</th>
+                    <th scope='col'>email</th>
+                    <th scope='col'>password</th>
+                    <th scope='col'>status</th>
                 </tr> {{-- all_tr_anchor --}}
             </thead>
             <tbody>
