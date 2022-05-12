@@ -10,10 +10,10 @@ class BannerController extends Controller
 {
     //
 
-    public function __construct()
-    {
-        $this->middleware('roleadmin');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('admin');
+    // }
     
     public function index()
     {
