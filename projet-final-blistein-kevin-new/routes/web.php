@@ -29,6 +29,74 @@ Route::get('/', function () {
     return view('welcome', compact("services","testimonials","users","banners"));
 });
 
+
+// Routes des différentes pages 
+
+Route::get('/front/pages/courses-grid', function () {
+    return view('/front/pages/courses-grid');
+});
+
+Route::get('/front/pages/about', function () {
+    return view('/front/pages/about');
+});
+
+Route::get('/front/pages/calendar-events', function () {
+    return view('/front/pages/calendar-events');
+});
+
+Route::get('/front/pages/classic-events', function () {
+    return view('/front/pages/classic-events');
+});
+
+Route::get('/front/pages/classic-news', function () {
+    return view('/front/pages/classic-news');
+});
+
+Route::get('/front/pages/contact', function () {
+    return view('/front/pages/contact');
+});
+
+Route::get('/front/pages/courses-list', function () {
+    return view('/front/pages/courses-list');
+});
+
+Route::get('/front/pages/gallery-3', function () {
+    return view('/front/pages/gallery-3');
+});
+
+Route::get('/front/pages/gallery-4', function () {
+    return view('/front/pages/gallery-4');
+});
+
+Route::get('/front/pages/grid-news', function () {
+    return view('/front/pages/grid-news');
+});
+
+Route::get('/front/pages/homepage-2', function () {
+    return view('/front/pages/homepage-2');
+});
+
+Route::get('/front/pages/our-teachers', function () {
+    return view('/front/pages/our-teachers');
+});
+
+Route::get('/front/pages/single-course', function () {
+    return view('/front/pages/single-course');
+});
+
+Route::get('/front/pages/single-event', function () {
+    return view('/front/pages/single-event');
+});
+
+Route::get('/front/pages/single-post', function () {
+    return view('/front/pages/single-post');
+});
+
+Route::get('/front/pages/single-teacher', function () {
+    return view('/front/pages/single-teacher');
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

@@ -13,7 +13,7 @@
 							</li>
 							<li class="menu-item-has-children"><a href="#">Courses</a>
 								<ul class="sub-menu">
-									<li><a href="courses-grid.html">Courses Grids</a></li>
+									<li><a href="{{ url('/front/pages/courses-grid') }}">Courses Grids</a></li>
 									<li><a href="courses-list.html">Courses List</a></li>
 									<li><a href="single-course.html">Single Course</a></li>
 								</ul>

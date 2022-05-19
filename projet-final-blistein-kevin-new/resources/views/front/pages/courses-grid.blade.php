@@ -15,15 +15,16 @@
 
 	
 
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<link rel="stylesheet" href="assets/css/jquery-ui.css">
-	<link rel="stylesheet" href="assets/css/simple-line-icons.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/css/icon-font.css">
-	<link rel="stylesheet" href="assets/css/educa.css">
-
-	<link rel="stylesheet" href="assets/rs-plugin/css/settings.css">
+	<link rel="stylesheet" href="{{ asset('/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/simple-line-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/icon-font.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/educa.css') }}">
+    <link rel="stylesheet" href="{{ asset('/rs-plugin/css/settings.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/front.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -534,14 +535,15 @@
 
 	
 
-	<script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-    <script src="assets/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script src="assets/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="{{ asset('/js/jquery-1.11.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/bootstrap.min.js') }}"></script>
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script src="{{ asset('/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
+    <script src="{{ asset('/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
 
-	<script type="text/javascript" src="assets/js/plugins.js"></script>
-	<script type="text/javascript" src="assets/js/custom.js"></script>
+    <script type="text/javascript" src="{{ asset('/js/plugins.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/custom.js') }}"></script>
 
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
