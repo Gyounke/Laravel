@@ -15,15 +15,15 @@
 
 	
 
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<link rel="stylesheet" href="assets/css/jquery-ui.css">
-	<link rel="stylesheet" href="assets/css/simple-line-icons.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/css/icon-font.css">
-	<link rel="stylesheet" href="assets/css/educa.css">
+	<link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}">
+	<link rel="stylesheet" href="{{ asset ("css/animate.css") }}">
+	<link rel="stylesheet" href="{{ asset ("css/jquery-ui.css") }}">
+	<link rel="stylesheet" href="{{ asset ("css/simple-line-icons.css") }}">
+	<link rel="stylesheet" href="{{ asset ("css/font-awesome.min.css") }} ">
+	<link rel="stylesheet" href="{{ asset ("css/icon-font.css") }}">
+	<link rel="stylesheet" href="{{ asset ("css/educa.css") }}">
 
-	<link rel="stylesheet" href="assets/rs-plugin/css/settings.css">
+	<link rel="stylesheet" href="{{ asset ("rs-plugin/css/settings.css") }}">
 
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -46,7 +46,7 @@
 					<div id="main-header" class="main-header header-sticky">
 						<div class="inner-header container clearfix">
 							<div class="logo">
-								<a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+								<a href="index.html"><img src="images/logo.png" alt=""></a>
 							</div>
 							<div class="header-right-toggle pull-right hidden-md hidden-lg">
 								<a href="javascript:void(0)" class="side-menu-button"><i class="fa fa-bars"></i></a>
@@ -74,43 +74,43 @@
 							</div>
 							<nav class="main-navigation text-left hidden-xs hidden-sm">
 								<ul>
-									<li><a href="#" class="has-submenu">Home</a>
+									<li><a href="" class="has-submenu">Home</a>
 										<ul class="sub-menu">
-											<li><a href="index.html">Homepage 1</a></li>
-											<li><a href="homepage-2.html">Homepage 2</a></li>
+											<li><a href="{{ url('') }}">Homepage 1</a></li>
+											<li><a href="{{ url('/front/pages/homepage-2') }}">Homepage 2</a></li>
 										</ul>
 									</li>
-									<li><a href="#" class="has-submenu">Courses</a>
+									<li><a href="" class="has-submenu">Courses</a>
 										<ul class="sub-menu">
-											<li><a href="courses-grid.html">Courses Grids</a></li>
-											<li><a href="courses-list.html">Courses List</a></li>
-											<li><a href="single-course.html">Single Course</a></li>
+											<li><a href="{{ url('/front/pages/courses-grid') }}">Courses Grids</a></li>
+											<li><a href="{{ url('/front/pages/courses-list') }}">Courses List</a></li>
+											<li><a href="{{ url('/front/pages/single-course') }}">Single Course</a></li>
 										</ul>
 									</li>
 									<li><a href="#" class="has-submenu">Events</a>
 										<ul class="sub-menu">
-											<li><a href="classic-events.html">Classic Events</a></li>
-											<li><a href="calendar-events.html">Calendar Events</a></li>
-											<li><a href="single-event.html">Single Event</a></li>
+											<li><a href="{{ url('/front/pages/classic-events') }}">Classic Events</a></li>
+											<li><a href="{{ url('/front/pages/calendar-events') }}">Calendar Events</a></li>
+											<li><a href="{{url('/front/pages/single-event') }}">Single Event</a></li>
 										</ul>
 									</li>
 									<li><a href="#" class="has-submenu">Pages</a>
 										<ul class="sub-menu">
-											<li><a href="about.html">About Us</a></li>
-											<li><a href="our-teachers.html">Our Teachers</a></li>
-											<li><a href="single-teacher.html">Single Teacher</a></li>
-											<li><a href="gallery-4.html">Gallery 4 Columns</a></li>
-											<li><a href="gallery-3.html">Gallery 3 Columns</a></li>
+											<li><a href="{{ url('/front/pages/about') }}">About Us</a></li>
+											<li><a href="{{ url('/front/pages/our-teachers') }}">Our Teachers</a></li>
+											<li><a href="{{ url('/front/pages/single-teacher') }}">Single Teacher</a></li>
+											<li><a href="{{ url('/front/pages/gallery-4') }}">Gallery 4 Columns</a></li>
+											<li><a href="{{ url('/front/pages/gallery-3') }}">Gallery 3 Columns</a></li>
 										</ul>
 									</li>
 									<li><a href="#" class="has-submenu">News</a>
 										<ul class="sub-menu">
-											<li><a href="classic-news.html">Classic News</a></li>
-											<li><a href="grid-news.html">Grid News</a></li>
-											<li><a href="single-post.html">Single Post</a></li>
+											<li><a href="{{ url('/front/pages/classic-events') }}">Classic News</a></li>
+											<li><a href="{{ url('/front/pages/grid-news') }}">Grid News</a></li>
+											<li><a href="{{ url('/front/pages/single-post') }}">Single Post</a></li>
 										</ul>
 									</li>
-									<li><a href="contact.html">Contact</a></li>
+									<li><a href="{{ url('/front/pages/contact') }}">Contact</a></li>
 									<li><a href="#search"><i class="fa fa-search"></i></a></li>
 								</ul>
 							</nav>
@@ -134,11 +134,11 @@
 								<span>Salvia next level crucifix pickled heirloom synth</span>
 								<div class="page-list">
 									<ul>
-										<li class="active"><a href="index.html">Home</a></li>
+										<li class="active"><a href="{{ url('') }}">Home</a></li>
 										<li><i class="fa fa-angle-right"></i></li>
 										<li><a href="#">Pages</a></li>
 										<li><i class="fa fa-angle-right"></i></li>
-										<li><a href="about.html">About Us</a></li>
+										<li><a href="{{ url('/front/pages/about') }}">About Us</a></li>
 									</ul>
 								</div>
 							</div>	
@@ -154,14 +154,14 @@
 									<div class="left-images">
 										<div class="row">
 											<div class="col-md-12">
-												<a href="single-post.html"><img src="http://placehold.it/470x240" alt=""></a>
+												<a href="{{ url('/front/pages/single-post') }}"><img src="http://placehold.it/470x240" alt=""></a>
 												<a href="single-post.html"><i class="fa fa-pencil"></i></a>
 											</div>
 											<div class="col-md-6 col-xs-6">
-												<a href="single-post.html"><img src="http://placehold.it/225x130" alt=""></a>
+												<a href="{{ url('/front/pages/single-post') }}"><img src="http://placehold.it/225x130" alt=""></a>
 											</div>
 											<div class="col-md-6 col-xs-6">
-												<a href="single-post.html"><img src="http://placehold.it/225x130" alt=""></a>
+												<a href="{{ url('/front/pages/single-post') }}"><img src="http://placehold.it/225x130" alt=""></a>
 											</div>
 										</div>
 									</div>
@@ -170,7 +170,7 @@
 									<div class="welcome-to-educa">
 										<div class="section-heading">
 											<h1>Welcome to Educa</h1>
-											<img src="assets/images/line-dec.png" alt="">
+											<img src="images/line-dec.png" alt="">
 											<span>Twee Vice synth stumptown</span>
 										</div>
 										<div class="row">
@@ -232,7 +232,7 @@
 									<div class="fact-item">
 										<div class="fact-holder">
 											<h4>1256</h4>
-											<img src="assets/images/line-dec.png" alt="">
+											<img src="images/line-dec.png" alt="">
 											<span>Great Costumer</span>
 											<div class="hover-content">
 												<i class="fa fa-user"></i>
@@ -242,7 +242,7 @@
 									<div class="fact-item">
 										<div class="fact-holder">
 											<h4>5000</h4>
-											<img src="assets/images/line-dec.png" alt="">
+											<img src="images/line-dec.png" alt="">
 											<span>Happy Clients</span>
 											<div class="hover-content">
 												<i class="fa fa-thumbs-up"></i>
@@ -252,7 +252,7 @@
 									<div class="fact-item">
 										<div class="fact-holder">
 											<h4>6789</h4>
-											<img src="assets/images/line-dec.png" alt="">
+											<img src="images/line-dec.png" alt="">
 											<span>Completed Projects</span>
 											<div class="hover-content">
 												<i class="fa fa-briefcase"></i>
@@ -262,7 +262,7 @@
 									<div class="fact-item">
 										<div class="fact-holder">
 											<h4>4892</h4>
-											<img src="assets/images/line-dec.png" alt="">
+											<img src="images/line-dec.png" alt="">
 											<span>Year Of Experience</span>
 											<div class="hover-content">
 												<i class="fa fa-area-chart"></i>
@@ -275,7 +275,7 @@
 						<div class="row">
 							<div class="section-heading text-center">
 								<h1>Our Skills</h1>
-								<img src="assets/images/line-dec.png" alt="">
+								<img src="images/line-dec.png" alt="">
 								<p>Twee Vice synth stumptown distillery aesthetic slow carb</p>
 							</div>
 						</div>
@@ -322,13 +322,13 @@
 							<div class="col-md-10 col-md-offset-1">
 								<div id="owl-testimonials">
 									<div class="item">
-										<img src="assets/images/testimonial-1.png" alt="">
+										<img src="images/testimonial-1.png" alt="">
 										<h4>Caroll m. davis</h4>
 										<span>Web Designer</span>
 										<p>Stumptown polaroid skateboard single-origin coffee. Farm-to-table Vice authentic Truffaut put a bird on it, pug ethical tousled photo booth gluten-free cliche bicycle rights four dollar toast single-origin coffee taxidermy.</p>
 									</div>
 									<div class="item">
-										<img src="assets/images/testimonial-2.png" alt="">
+										<img src="images/testimonial-2.png" alt="">
 										<h4>John L. Smith</h4>
 										<span>Ceo Founder</span>
 										<p>Stumptown polaroid skateboard single-origin coffee. Farm-to-table Vice authentic Truffaut put a bird on it, pug ethical tousled photo booth gluten-free cliche bicycle rights four dollar toast single-origin coffee taxidermy.</p>
@@ -344,7 +344,7 @@
 						<div class="row">
 							<div class="section-heading text-center">
 								<h1>Our Teachers</h1>
-								<img src="assets/images/line-dec.png" alt="">
+								<img src="images/line-dec.png" alt="">
 								<p>High Life squid literally scenester fap Helvetica quinoa church-key</p>
 							</div>
 						</div>
@@ -363,7 +363,7 @@
 										</div>
 									</div>
 									<div class="down-content">
-										<a href="single-teacher.html"><h4>Nick Smith</h4></a>
+										<a href="{{ url('/front/pages/single-teacher') }}"><h4>Nick Smith</h4></a>
 										<span>Physic Teacher</span>
 										<p>Ugh chambray lumbersexual food  artisan meditation sartorial well post-ironic wes</p>
 									</div>
@@ -383,7 +383,7 @@
 										</div>
 									</div>
 									<div class="down-content">
-										<a href="single-teacher.html"><h4>John Rosado</h4></a>
+										<a href="{{ url('/front/pages/single-teacher') }}"><h4>John Rosado</h4></a>
 										<span>Emglish Teacher</span>
 										<p>Ugh chambray lumbersexual food  artisan meditation sartorial well post-ironic wes</p>
 									</div>
@@ -403,7 +403,7 @@
 										</div>
 									</div>
 									<div class="down-content">
-										<a href="single-teacher.html"><h4>Maria Lehmann</h4></a>
+										<a href="{{ url('/front/pages/single-teacher') }}"><h4>Maria Lehmann</h4></a>
 										<span>Design Teacher</span>
 										<p>Ugh chambray lumbersexual food  artisan meditation sartorial well post-ironic wes</p>
 									</div>
@@ -423,7 +423,7 @@
 										</div>
 									</div>
 									<div class="down-content">
-										<a href="single-teacher.html"><h4>Samuel Delossantos</h4></a>
+										<a href="{{ url('/front/pages/single-teacher') }}"><h4>Samuel Delossantos</h4></a>
 										<span>Math Teacher</span>
 										<p>Ugh chambray lumbersexual food  artisan meditation sartorial well post-ironic wes</p>
 									</div>
@@ -438,7 +438,7 @@
 						<div class="row">
 							<p>Young people have been 'mis-sold' <em>path to success</em>, business leaders warn.</p>
 							<div class="accent-button">
-								<a href="courses-list.html">View Courses</a>
+								<a href="{{ url('/front/pages/courses-list') }}">View Courses</a>
 							</div>
 						</div>
 					</div>
@@ -450,7 +450,7 @@
 							<div class="col-md-3">
 								<div class="footer-widget">
 									<div class="educa-info">
-										<img src="assets/images/logo-2.png" alt="">
+										<img src="images/logo-2.png" alt="">
 										<div class="line-dec"></div>
 										<p>Viral megings photo booth farm tab McSweeney's Thundercats til typewrite PBR food truck Kickstarter mumb ennui Tumblr. Jean shorts hoodiele.</p>
 										<div class="text-button">
@@ -548,41 +548,41 @@
 						<ul>
 							<li class="menu-item-has-children"><a href="#">Home</a>
 								<ul class="sub-menu">
-									<li><a href="index.html">Homepage 1</a></li>
-									<li><a href="homepage-2.html">Homepage 2</a></li>
+									<li><a href="{{ url('') }}">Homepage 1</a></li>
+									<li><a href="{{ url('/front/pages/homepage-2') }}">Homepage 2</a></li>
 								</ul>
 							</li>
 							<li class="menu-item-has-children"><a href="#">Courses</a>
 								<ul class="sub-menu">
-									<li><a href="courses-grid.html">Courses Grids</a></li>
-									<li><a href="courses-list.html">Courses List</a></li>
-									<li><a href="single-course.html">Single Course</a></li>
+									<li><a href="{{ url('/front/pages/courses-grid') }}">Courses Grids</a></li>
+									<li><a href="{{ url('/front/pages/courses-list') }}">Courses List</a></li>
+									<li><a href="{{ url('/front/pages/single-course') }}">Single Course</a></li>
 								</ul>
 							</li>
 							<li class="menu-item-has-children"><a href="#">Events</a>
 								<ul class="sub-menu">
-									<li><a href="classic-events.html">Classic Events</a></li>
-									<li><a href="calendar-events.html">Calendar Events</a></li>
-									<li><a href="single-event.html">Single Event</a></li>
+									<li><a href="{{ url('/front/pages/classic-events') }}">Classic Events</a></li>
+									<li><a href="{{ url('/front/pages/calendar-events') }}">Calendar Events</a></li>
+									<li><a href="{{ url('/front/pages/single-event') }}">Single Event</a></li>
 								</ul>
 							</li>
 							<li class="menu-item-has-children"><a href="#">Pages</a>
 								<ul class="sub-menu">
-									<li><a href="about.html">About Us</a></li>
-									<li><a href="our-teachers.html">Our Teachers</a></li>
-									<li><a href="single-teacher.html">Single Teacher</a></li>
-									<li><a href="gallery-4.html">Gallery 4 Columns</a></li>
-									<li><a href="gallery-3.html">Gallery 3 Columns</a></li>
+									<li><a href="{{ url('/front/pages/about') }}">About Us</a></li>
+									<li><a href="{{ url('/front/pages/our-teacher') }}">Our Teachers</a></li>
+									<li><a href="{{ url('/front/pages/single-teacher') }}">Single Teacher</a></li>
+									<li><a href="{{ url('/front/pages/gallery-4') }}">Gallery 4 Columns</a></li>
+									<li><a href="{{ url('/front/pages/gallery-3') }}">Gallery 3 Columns</a></li>
 								</ul>
 							</li>
 							<li class="menu-item-has-children"><a href="#">News</a>
 								<ul class="sub-menu">
-									<li><a href="classic-news.html">Classic News</a></li>
-									<li><a href="grid-news.html">Grid News</a></li>
-									<li><a href="single-post.html">Single Post</a></li>
+									<li><a href="{{ url('/front/pages/classic-news') }}">Classic News</a></li>
+									<li><a href="{{ url('/front/pages/grid-news') }}">Grid News</a></li>
+									<li><a href="{{ url('/front/pages/single-post') }}">Single Post</a></li>
 								</ul>
 							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="{{ url('/front/pages/contact') }}">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -594,14 +594,14 @@
 
 	
 
-	<script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{{ asset("js/jquery-1.11.1.min.js") }}"></script>
+	<script type="text/javascript" src="{{ asset("js/bootstrap.min.js") }}"></script>
 	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-    <script src="assets/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script src="assets/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="{{ asset("rs-plugin/js/jquery.themepunch.tools.min.js") }}"></script>
+    <script src="{{ asset("rs-plugin/js/jquery.themepunch.revolution.min.js") }}"></script>
 
-	<script type="text/javascript" src="assets/js/plugins.js"></script>
-	<script type="text/javascript" src="assets/js/custom.js"></script>
+	<script type="text/javascript" src="{{ asset("js/plugins.js") }}"></script>
+	<script type="text/javascript" src="{{ asset("js/custom.js") }}"></script>
 
 </body>
 </html>

@@ -15,15 +15,15 @@
 
 	
 
-	<link rel="stylesheet" href="{{ asset("assets/css/bootstrap.css")}}">
-	<link rel="stylesheet" href="{{ asset("assets/css/animate.css")}}">
-	<link rel="stylesheet" href="{{ asset("assets/css/jquery-ui.css")}}">
-	<link rel="stylesheet" href="{{ asset("assets/css/simple-line-icons.css")}}">
-	<link rel="stylesheet" href="{{ asset("assets/css/font-awesome.min.css")}}">
-	<link rel="stylesheet" href="{{ asset("assets/css/icon-font.css")}}">
-	<link rel="stylesheet" href="{{ asset("assets/css/educa.css")}}">
+	<link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
+	<link rel="stylesheet" href="{{ asset("css/animate.css")}}">
+	<link rel="stylesheet" href="{{ asset("css/jquery-ui.css")}}">
+	<link rel="stylesheet" href="{{ asset("css/simple-line-icons.css")}}">
+	<link rel="stylesheet" href="{{ asset("css/font-awesome.min.css")}}">
+	<link rel="stylesheet" href="{{ asset("css/icon-font.css")}}">
+	<link rel="stylesheet" href="{{ asset("css/educa.css")}}">
 
-	<link rel="stylesheet" href="{{ asset("assets/rs-plugin/css/settings.css")}}">
+	<link rel="stylesheet" href="{{ asset("rs-plugin/css/settings.css")}}">
 
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -70,14 +70,14 @@
 
 	<!-- Scripts  -->
 
-	<script type="text/javascript" src="{{ asset("assets/js/jquery-1.11.1.min.js")}}"></script>
-	<script type="text/javascript" src="{{ asset("assets/js/bootstrap.min.js")}}"></script>
+	<script type="text/javascript" src="{{ asset("js/jquery-1.11.1.min.js")}}"></script>
+	<script type="text/javascript" src="{{ asset("js/bootstrap.min.js")}}"></script>
 	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-    <script src="{{ asset("assets/rs-plugin/js/jquery.themepunch.tools.min.js")}}"></script>
-    <script src="{{ asset("assets/rs-plugin/js/jquery.themepunch.revolution.min.js")}}"></script>
+    <script src="{{ asset("rs-plugin/js/jquery.themepunch.tools.min.js")}}"></script>
+    <script src="{{ asset("rs-plugin/js/jquery.themepunch.revolution.min.js")}}"></script>
 
-	<script type="text/javascript" src="{{ asset("assets/js/plugins.js")}}"></script>
-	<script type="text/javascript" src="{{ asset("assets/js/custom.js")}}"></script>
+	<script type="text/javascript" src="{{ asset("js/plugins.js")}}"></script>
+	<script type="text/javascript" src="{{ asset("js/custom.js")}}"></script>
 
 </body>
 </html>
