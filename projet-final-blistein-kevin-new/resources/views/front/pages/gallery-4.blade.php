@@ -15,15 +15,16 @@
 
 	
 
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<link rel="stylesheet" href="assets/css/jquery-ui.css">
-	<link rel="stylesheet" href="assets/css/simple-line-icons.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/css/icon-font.css">
-	<link rel="stylesheet" href="assets/css/educa.css">
-
-	<link rel="stylesheet" href="assets/rs-plugin/css/settings.css">
+	<link rel="stylesheet" href="{{ asset('/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/simple-line-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/icon-font.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/educa.css') }}">
+    <link rel="stylesheet" href="{{ asset('/rs-plugin/css/settings.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/front.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -74,43 +75,43 @@
 							</div>
 							<nav class="main-navigation text-left hidden-xs hidden-sm">
 								<ul>
-									<li><a href="#" class="has-submenu">Home</a>
+									<li><a href="" class="has-submenu">Home</a>
 										<ul class="sub-menu">
-											<li><a href="index.html">Homepage 1</a></li>
-											<li><a href="homepage-2.html">Homepage 2</a></li>
+											<li><a href="{{ url('') }}">Homepage 1</a></li>
+											<li><a href="{{ url('/front/pages/homepage-2') }}">Homepage 2</a></li>
 										</ul>
 									</li>
-									<li><a href="#" class="has-submenu">Courses</a>
+									<li><a href="" class="has-submenu">Courses</a>
 										<ul class="sub-menu">
-											<li><a href="courses-grid.html">Courses Grids</a></li>
-											<li><a href="courses-list.html">Courses List</a></li>
-											<li><a href="single-course.html">Single Course</a></li>
+											<li><a href="{{ url('/front/pages/courses-grid') }}">Courses Grids</a></li>
+											<li><a href="{{ url('/front/pages/courses-list') }}">Courses List</a></li>
+											<li><a href="{{ url('/front/pages/single-course') }}">Single Course</a></li>
 										</ul>
 									</li>
 									<li><a href="#" class="has-submenu">Events</a>
 										<ul class="sub-menu">
-											<li><a href="classic-events.html">Classic Events</a></li>
-											<li><a href="calendar-events.html">Calendar Events</a></li>
-											<li><a href="single-event.html">Single Event</a></li>
+											<li><a href="{{ url('/front/pages/classic-events') }}">Classic Events</a></li>
+											<li><a href="{{ url('/front/pages/calendar-events') }}">Calendar Events</a></li>
+											<li><a href="{{url('/front/pages/single-event') }}">Single Event</a></li>
 										</ul>
 									</li>
 									<li><a href="#" class="has-submenu">Pages</a>
 										<ul class="sub-menu">
-											<li><a href="about.html">About Us</a></li>
-											<li><a href="our-teachers.html">Our Teachers</a></li>
-											<li><a href="single-teacher.html">Single Teacher</a></li>
-											<li><a href="gallery-4.html">Gallery 4 Columns</a></li>
-											<li><a href="gallery-3.html">Gallery 3 Columns</a></li>
+											<li><a href="{{ url('/front/pages/about') }}">About Us</a></li>
+											<li><a href="{{ url('/front/pages/our-teachers') }}">Our Teachers</a></li>
+											<li><a href="{{ url('/front/pages/single-teacher') }}">Single Teacher</a></li>
+											<li><a href="{{ url('/front/pages/gallery-4') }}">Gallery 4 Columns</a></li>
+											<li><a href="{{ url('/front/pages/gallery-3') }}">Gallery 3 Columns</a></li>
 										</ul>
 									</li>
 									<li><a href="#" class="has-submenu">News</a>
 										<ul class="sub-menu">
-											<li><a href="classic-news.html">Classic News</a></li>
-											<li><a href="grid-news.html">Grid News</a></li>
-											<li><a href="single-post.html">Single Post</a></li>
+											<li><a href="{{ url('/front/pages/classic-events') }}">Classic News</a></li>
+											<li><a href="{{ url('/front/pages/grid-news') }}">Grid News</a></li>
+											<li><a href="{{ url('/front/pages/single-post') }}">Single Post</a></li>
 										</ul>
 									</li>
-									<li><a href="contact.html">Contact</a></li>
+									<li><a href="{{ url('/front/pages/contact') }}">Contact</a></li>
 									<li><a href="#search"><i class="fa fa-search"></i></a></li>
 								</ul>
 							</nav>
@@ -444,41 +445,41 @@
 						<ul>
 							<li class="menu-item-has-children"><a href="#">Home</a>
 								<ul class="sub-menu">
-									<li><a href="index.html">Homepage 1</a></li>
-									<li><a href="homepage-2.html">Homepage 2</a></li>
+									<li><a href="{{ url('') }}">Homepage 1</a></li>
+									<li><a href="{{ url('/front/pages/homepage-2') }}">Homepage 2</a></li>
 								</ul>
 							</li>
 							<li class="menu-item-has-children"><a href="#">Courses</a>
 								<ul class="sub-menu">
-									<li><a href="courses-grid.html">Courses Grids</a></li>
-									<li><a href="courses-list.html">Courses List</a></li>
-									<li><a href="single-course.html">Single Course</a></li>
+									<li><a href="{{ url('/front/pages/courses-grid') }}">Courses Grids</a></li>
+									<li><a href="{{ url('/front/pages/courses-list') }}">Courses List</a></li>
+									<li><a href="{{ url('/front/pages/single-course') }}">Single Course</a></li>
 								</ul>
 							</li>
 							<li class="menu-item-has-children"><a href="#">Events</a>
 								<ul class="sub-menu">
-									<li><a href="classic-events.html">Classic Events</a></li>
-									<li><a href="calendar-events.html">Calendar Events</a></li>
-									<li><a href="single-event.html">Single Event</a></li>
+									<li><a href="{{ url('/front/pages/classic-events') }}">Classic Events</a></li>
+									<li><a href="{{ url('/front/pages/calendar-events') }}">Calendar Events</a></li>
+									<li><a href="{{ url('/front/pages/single-event') }}">Single Event</a></li>
 								</ul>
 							</li>
 							<li class="menu-item-has-children"><a href="#">Pages</a>
 								<ul class="sub-menu">
-									<li><a href="about.html">About Us</a></li>
-									<li><a href="our-teachers.html">Our Teachers</a></li>
-									<li><a href="single-teacher.html">Single Teacher</a></li>
-									<li><a href="gallery-4.html">Gallery 4 Columns</a></li>
-									<li><a href="gallery-3.html">Gallery 3 Columns</a></li>
+									<li><a href="{{ url('/front/pages/about') }}">About Us</a></li>
+									<li><a href="{{ url('/front/pages/our-teacher') }}">Our Teachers</a></li>
+									<li><a href="{{ url('/front/pages/single-teacher') }}">Single Teacher</a></li>
+									<li><a href="{{ url('/front/pages/gallery-4') }}">Gallery 4 Columns</a></li>
+									<li><a href="{{ url('/front/pages/gallery-3') }}">Gallery 3 Columns</a></li>
 								</ul>
 							</li>
 							<li class="menu-item-has-children"><a href="#">News</a>
 								<ul class="sub-menu">
-									<li><a href="classic-news.html">Classic News</a></li>
-									<li><a href="grid-news.html">Grid News</a></li>
-									<li><a href="single-post.html">Single Post</a></li>
+									<li><a href="{{ url('/front/pages/classic-news') }}">Classic News</a></li>
+									<li><a href="{{ url('/front/pages/grid-news') }}">Grid News</a></li>
+									<li><a href="{{ url('/front/pages/single-post') }}">Single Post</a></li>
 								</ul>
 							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="{{ url('/front/pages/contact') }}">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -490,14 +491,15 @@
 
 	
 
-	<script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-    <script src="assets/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script src="assets/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="{{ asset('/js/jquery-1.11.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/bootstrap.min.js') }}"></script>
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script src="{{ asset('/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
+    <script src="{{ asset('/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
 
-	<script type="text/javascript" src="assets/js/plugins.js"></script>
-	<script type="text/javascript" src="assets/js/custom.js"></script>
+    <script type="text/javascript" src="{{ asset('/js/plugins.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/custom.js') }}"></script>
 
+    
 </body>
 </html>
