@@ -1,7 +1,7 @@
 @extends('back.layouts.app')
 @section('content')
     <div class='container'>
-        <h1 class='my-5'>Services</h1>
+        <h1 class='my-5'>Courses</h1>
         @if (session()->has('message'))
             <div class='alert alert-success'>
                 {{ session()->get('message') }}
@@ -17,36 +17,41 @@
             </div>
         @endif
             
-        <a href="{{ route('services.create') }}" class="btn btncus">Create</a>
+        <a href="{{ route('courses.create') }}" class="btn btncus">Create</a>
 
         <table class='table'>
             <thead>
                 <tr>
                     <th scope='col'>#</th>
-                    <th scope='col'>Icone</th>
-                    <th scope='col'>Title</th>
-                    <th scope='col'>Description</th>
+                    <th scope='col'>Professor</th>
+                    <th scope='col'>Image</th>
+                    <th scope='col'>Price</th>
+                    <th scope='col'>Course name</th>
+                    <th scope='col'>Course description</th>
                 </tr> {{-- all_tr_anchor --}}
             </thead>
             <tbody>
-                @foreach ($services as $item)
+                @foreach ($courses as $item)
                     <tr>
                         <th scope='row'>{{ $item->id }}</th>
-                        <td><img src="{{ "/images/" . $item->icone }}" alt=""></td>
-                        <td>{!! $item->title !!}</td>
-                        <td>{{ $item->description }}</td>
+                        <td><img src="{{ "/images/" . $item->image }}" alt=""></td>
+                        <td>{!! $item->professor !!}</td>
+                        <td>{{ $item->image }}</td>
+                        <td>{{ $item->price }}</td>
+                        <td>{{ $item->course_name }}</td>
+                        <td>{{ $item->course_description }}</td>
                         <td> {{-- all_td_anchor --}}
                             <div class='d-flex'>
                                 @can('delete', $item)
-                                <form action="{{ route('services.destroy', $item->id) }}" method="POST">
+                                <form action="{{ route('courses.destroy', $item->id) }}" method="POST">
                                     @csrf
                                     <button class="btn btncus2 ">Delete</button>
                                 </form>
                                 @endcan
                                 @can('update', $item)
-                                <a class='btn btncus3 mx-2' href='{{ route('services.edit', $item ) }}' role='button'>Edit</a>
+                                <a class='btn btncus3 mx-2' href='{{ route('courses.edit', $item ) }}' role='button'>Edit</a>
                                 @endcan
-                                <a class='btn btncus3' href='{{ route('services.show', $item ) }}' role='button'>Read</a>
+                                <a class='btn btncus3' href='{{ route('courses.show', $item ) }}' role='button'>Read</a>
                             </div>
                         </td>
                     </tr>

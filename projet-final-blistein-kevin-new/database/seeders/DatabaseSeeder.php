@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             ServiceSeeder::class,
             CourseSeeder::class,
             TeacherSeeder::class,
+            TestimonialSeeder::class,
         ]);
     }
 }

@@ -5,6 +5,8 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TestimonialController;
 use App\http\Controllers\UserController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\CourseController;
+
 use App\Models\Service;
 use App\Models\Testimonial;
 use App\Models\User;
