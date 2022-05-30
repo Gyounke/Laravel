@@ -4,82 +4,46 @@ namespace App\Http\Controllers;
 
 use App\Models\Banner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class BannerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    //
+
+    // public function __construct()
+    // {
+    //     $this->middleware('admin');
+    // }
+    
     public function index()
     {
-        //
+        $banners = Banner::all();
+        return view("/back/banners/all",compact("banners"));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function read($id)
     {
-        //
+        $banners = Banner::find($id);
+        return view("/back/banners/read",compact("banners"));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function edit($id)
     {
-        //
+        $banner = Banner::find($id);
+        return view("/back/banners/edit",compact("banner"));
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Banner  $banner
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Banner $banner)
+    public function update($id, Request $request)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Banner  $banner
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Banner $banner)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Banner  $banner
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Banner $banner)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Banner  $banner
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Banner $banner)
-    {
-        //
+        $banner = Banner::find($id);
+        $banner->subtitle = $request->subtitle;
+        $banner->title = $request->title;
+        /* $destination = "img/" . $banner->image;
+        if (File::exists($destination)) {
+            File::delete($destination);
+        }
+        $service->image = $request->file("image")->hashName(); */
+        $banner->button = $request->button;
+        $banner->updated_at = now();
+        $banner->save();
+        /* $request->file("image")->storePublicly("images", "public"); */
+        return redirect()->route("banners.index")->with('message', "Service updated");
     }
 }

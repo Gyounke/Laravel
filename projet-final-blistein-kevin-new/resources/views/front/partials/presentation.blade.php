@@ -13,34 +13,34 @@
 									<div class="row">
 										<div class="col-md-6 col-sm-6">
 											<div class="service-item">
-												<i class="fa fa-graduation-cap"></i>
-												<h4>Graduated Steps</h4>
+												<i class="{{ $services[0]->icone}}"></i>
+												<h4>{{ $services[0]->title}}</h4>
 												<div class="line-dec"></div>
-												<p>Photo booth Banksy YOLO mixtape post-ironic they sold out all.</p>
+												<p>{{ $services[0]->description}}</p>
 											</div>
 										</div>
 										<div class="col-md-6 col-sm-6">
 											<div class="service-item">
-												<i class="fa fa-globe"></i>
-												<h4>Global Interested</h4>
+												<i class="{{ $services[1]->icone}}"></i>
+												<h4>{{ $services[1]->title }}</h4>
 												<div class="line-dec"></div>
-												<p>Photo booth Banksy YOLO mixtape post-ironic they sold out all.</p>
+												<p>{{ $services[1]->description }}</p>
 											</div>
 										</div>
 										<div class="col-md-6 col-sm-6">
 											<div class="service-item">
-												<i class="fa fa-clock-o"></i>
-												<h4>Circular Clock</h4>
+												<i class="{{ $services[2]->icone }}"></i>
+												<h4>{{ $services[2]->title}}</h4>
 												<div class="line-dec"></div>
-												<p>Photo booth Banksy YOLO mixtape post-ironic they sold out all.</p>
+												<p>{{ $services[2]->description }}</p>
 											</div>
 										</div>
 										<div class="col-md-6 col-sm-6">
 											<div class="service-item last-service">
-												<i class="fa fa-book"></i>
-												<h4>Open Book</h4>
+												<i class="{{ $services[3]->icone }}"></i>
+												<h4>{{ $services[3]->title }}</h4>
 												<div class="line-dec"></div>
-												<p>Photo booth Banksy YOLO mixtape post-ironic they sold out all.</p>
+												<p>{{ $services[3]->description }}</p>
 											</div>
 										</div>
 									</div>

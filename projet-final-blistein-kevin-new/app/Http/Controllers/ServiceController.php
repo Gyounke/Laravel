@@ -4,82 +4,46 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ServiceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    //
+
+    // public function __construct()
+    // {
+    //     $this->middleware('admin');
+    // }
+    
     public function index()
     {
-        //
+        $services = Service::all();
+        return view("/back/services/all",compact("services"));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function read($id)
     {
-        //
+        $services = Service::find($id);
+        return view("/back/services/read",compact("services"));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function edit($id)
     {
-        //
+        $service = Service::find($id);
+        return view("/back/services/edit",compact("service"));
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Service $service)
+    public function update($id, Request $request)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Service $service)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Service $service)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Service $service)
-    {
-        //
+        $service = Service::find($id);
+        $service->subtitle = $request->subtitle;
+        $service->title = $request->title;
+        /* $destination = "img/" . $service->image;
+        if (File::exists($destination)) {
+            File::delete($destination);
+        }
+        $service->image = $request->file("image")->hashName(); */
+        $service->button = $request->button;
+        $service->updated_at = now();
+        $service->save();
+        /* $request->file("image")->storePublicly("images", "public"); */
+        return redirect()->route("services.index")->with('message', "Service updated");
     }
 }

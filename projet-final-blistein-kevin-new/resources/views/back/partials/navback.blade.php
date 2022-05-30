@@ -4,15 +4,15 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-    <link rel='stylesheet' href='{{ asset('assets/css/app.css') }}'>
+    <link rel='stylesheet' href='{{ asset('css/app.css') }}'>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link href="{{ asset("vendor/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("js/bootstrap.min.css") }}" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{{ asset("assets/css/font-awesome.min.css") }}">
-    <link rel="stylesheet" href="{{ asset("assets/css/educa.css") }}">
-    <link rel="stylesheet" href="{{ asset("assets/css/bootstrap.css") }}">
-    <link rel="stylesheet" href="{{ asset("assets/css/animate.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/font-awesome.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/educa.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/animate.css") }}">
 </head>
 <body>
 <div class="sidebar">

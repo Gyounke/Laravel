@@ -5,7 +5,7 @@
 						<div class="row">
 							<div class="section-heading text-center">
 								<h1>Our Teachers</h1>
-								<img src="{{ asset("assets/images/line-dec.png")}}" alt="">
+								<img src="{{ asset("images/line-dec.png")}}" alt="">
 								<p>High Life squid literally scenester fap Helvetica quinoa church-key</p>
 							</div>
 						</div>
@@ -13,7 +13,7 @@
 							<div class="col-md-3 col-sm-6">
 								<div class="teacher-item">
 									<div class="thumb-holder">
-										<a href="single-teacher.html"><img src="http://placehold.it/270x180" alt=""></a>
+										<a href="{{ url('/front/pages/single-teacher') }}"><img src="{{ asset("images/line-dec.png")}}" alt=""></a>
 										<div class="hover-content">
 											<ul>
 												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -24,16 +24,16 @@
 										</div>
 									</div>
 									<div class="down-content">
-										<a href="single-teacher.html"><h4>Nick Smith</h4></a>
-										<span>Physic Teacher</span>
-										<p>Ugh chambray lumbersexual food  artisan meditation sartorial well post-ironic wes</p>
+										<a href="{{ url('/front/pages/single-teacher') }}"><h4>{{ $teachers[0]->name }}</h4></a>
+										<span>{{ $teachers[0]->field }}</span>
+										<p>{{ $teachers[0]->description }}</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-6">
 								<div class="teacher-item">
 									<div class="thumb-holder">
-										<a href="single-teacher.html"><img src="http://placehold.it/270x180" alt=""></a>
+										<a href="{{ url('/front/pages/single-teacher') }}"><img src="{{ asset("images/line-dec.png")}}" alt=""></a>
 										<div class="hover-content">
 											<ul>
 												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -44,16 +44,16 @@
 										</div>
 									</div>
 									<div class="down-content">
-										<a href="single-teacher.html"><h4>John Rosado</h4></a>
-										<span>Emglish Teacher</span>
-										<p>Ugh chambray lumbersexual food  artisan meditation sartorial well post-ironic wes</p>
+										<a href="{{ url('/front/pages/single-teacher') }}"><h4>{{ $teachers[1]->name }}</h4></a>
+										<span>{{ $teachers[1]->field }}</span>
+										<p>{{ $teachers[1]->description }}</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-6">
 								<div class="teacher-item">
 									<div class="thumb-holder">
-										<a href="single-teacher.html"><img src="http://placehold.it/270x180" alt=""></a>
+										<a href="{{ url('/front/pages/single-teacher') }}"><img src="{{ asset("images/line-dec.png")}}" alt=""></a>
 										<div class="hover-content">
 											<ul>
 												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -64,16 +64,16 @@
 										</div>
 									</div>
 									<div class="down-content">
-										<a href="single-teacher.html"><h4>Maria Lehmann</h4></a>
-										<span>Design Teacher</span>
-										<p>Ugh chambray lumbersexual food  artisan meditation sartorial well post-ironic wes</p>
+										<a href="{{ url('/front/pages/single-teacher') }}"><h4>{{ $teachers[2]->name }}</h4></a>
+										<span>{{ $teachers[2]->field }}</span>
+										<p>{{ $teachers[2]->description }}</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-6">
 								<div class="teacher-item">
 									<div class="thumb-holder">
-										<a href="single-teacher.html"><img src="http://placehold.it/270x180" alt=""></a>
+										<a href="{{ url('/front/pages/single-teacher') }}"><img src="{{ asset("images/line-dec.png")}}" alt=""></a>
 										<div class="hover-content">
 											<ul>
 												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -84,9 +84,9 @@
 										</div>
 									</div>
 									<div class="down-content">
-										<a href="single-teacher.html"><h4>Samuel Delossantos</h4></a>
-										<span>Math Teacher</span>
-										<p>Ugh chambray lumbersexual food  artisan meditation sartorial well post-ironic wes</p>
+										<a href="{{ url('/front/pages/single-teacher') }}"><h4>{{ $teachers[3]->name }}</h4></a>
+										<span>{{ $teachers[3]->field }}</span>
+										<p>{{ $teachers[3]->description }}</p>
 									</div>
 								</div>
 							</div>

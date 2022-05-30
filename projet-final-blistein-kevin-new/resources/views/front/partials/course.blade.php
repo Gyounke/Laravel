@@ -11,152 +11,153 @@
 						<div class="row">
 							<div id="owl-courses">
 								<div class="item course-item">
-									<a href="single-course.html"><img src="http://placehold.it/345x235" alt=""></a>
+									<a href="{{ url('/front/pages/single-course') }}"><img src="http://placehold.it/345x235" alt=""></a>
 									<div class="down-content">
-										<img src="http://placehold.it/44x44" alt="">
-										<h6>Ernest Byrd</h6>
+										<img src="{{ asset("images/" . $courses[0]->image) }}" alt="">
+										<h6>{{ $courses[0]->professor}}</h6>
 										<div class="price-red">
-											<span>$19.99</span>
+											<span>{{ $courses[0]->price}}</span>
 											<div class="base"></div>
 										</div>
-										<a href="single-course.html"><h4>How to become<br>a Powerful Speaker</h4></a>
-										<p>Ugh chambray lumbersexual food truc artisan meditation sartorial post-ironic Wes Anderson.</p>
+										<a href="{{ url('/front/pages/single-course') }}"><h4>{{ $courses[0]->course_name }}</h4></a>
+										<p>{{ $courses[0]->course_description}}</p>
 										<div class="text-button">
-											<a href="single-course.html">view more<i class="fa fa-arrow-right"></i></a>
+											<a href="{{ url('/front/pages/single-course') }}">view more<i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
 								<div class="item course-item">
-									<a href="single-course.html"><img src="http://placehold.it/345x235" alt=""></a>
+									<a href="{{ url('/front/pages/single-course') }}"><img src="http://placehold.it/345x235" alt=""></a>
 									<div class="down-content">
-										<img src="http://placehold.it/44x44" alt="">
-										<h6>Ernest Byrd</h6>
+										<img src="{{ asset("images/" . $courses[1]->image) }}" alt="">
+										<h6>{{ $courses[1]->professor}}</h6>
 										<div class="price-red">
-											<span>$49.99</span>
+											<span>{{ $courses[1]->price}}</span>
 											<div class="base"></div>
 										</div>
-										<a href="single-course.html"><h4>Electrical &amp; Electronic <br>Engingering</h4></a>
-										<p>Ugh chambray lumbersexual food truc artisan meditation sartorial post-ironic Wes Anderson.</p>
+										<a href="{{ url('/front/pages/single-course') }}"><h4>{{ $courses[1]->course_name }}</h4></a>
+										<p>{{ $courses[1]->course_description}}</p>
 										<div class="text-button">
-											<a href="single-course.html">view more<i class="fa fa-arrow-right"></i></a>
+											<a href="{{ url('/front/pages/single-course') }}">view more<i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
 								<div class="item course-item">
-									<a href="single-course.html"><img src="http://placehold.it/345x235" alt=""></a>
+									<a href="{{ url('/front/pages/single-course') }}"><img src="http://placehold.it/345x235" alt=""></a>
 									<div class="down-content">
-										<img src="http://placehold.it/44x44" alt="">
-										<h6>Ernest Byrd</h6>
+										<img src="{{ asset("images/" . $courses[2]->image) }}" alt="">
+										<h6>{{ $courses[2]->professor}}</h6>
 										<div class="price-red">
-											<span>$19.99</span>
+											<span>{{ $courses[2]->price}}</span>
 											<div class="base"></div>
 										</div>
-										<a href="single-course.html"><h4>How to become<br>a Powerful Speaker</h4></a>
-										<p>Ugh chambray lumbersexual food truc artisan meditation sartorial post-ironic Wes Anderson.</p>
+										<a href="{{ url('/front/pages/single-course') }}"><h4>{{ $courses[2]->course_name }}</h4></a>
+										<p>{{ $courses[2]->course_description}}</p>
 										<div class="text-button">
-											<a href="single-course.html">view more<i class="fa fa-arrow-right"></i></a>
+											<a href="{{ url('/front/pages/single-course') }}">view more<i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
 								<div class="item course-item">
-									<a href="single-course.html"><img src="http://placehold.it/345x235" alt=""></a>
+									<a href="{{ url('/front/pages/single-course') }}"><img src="http://placehold.it/345x235" alt=""></a>
 									<div class="down-content">
-										<img src="http://placehold.it/44x44" alt="">
-										<h6>Ernest Byrd</h6>
-										<div class="price-yellow">
-											<span>Free</span>
-											<div class="base"></div>
-										</div>
-										<a href="single-course.html"><h4>What can you do<br>With a Business Degree?</h4></a>
-										<p>Ugh chambray lumbersexual food truc artisan meditation sartorial post-ironic Wes Anderson.</p>
-										<div class="text-button">
-											<a href="single-course.html">view more<i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
-								</div>
-								<div class="item course-item">
-									<a href="single-course.html"><img src="http://placehold.it/345x235" alt=""></a>
-									<div class="down-content">
-										<img src="http://placehold.it/44x44" alt="">
-										<h6>Ernest Byrd</h6>
+										<img src="{{ asset("images/" . $courses[3]->image) }}" alt="">
+										<h6>{{ $courses[3]->professor}}</h6>
 										<div class="price-red">
-											<span>$29.99</span>
+											<span>{{ $courses[3]->price}}</span>
 											<div class="base"></div>
 										</div>
-										<a href="single-course.html"><h4>Fashion buying<br>and Product Management</h4></a>
-										<p>Ugh chambray lumbersexual food truc artisan meditation sartorial post-ironic Wes Anderson.</p>
+										<a href="{{ url('/front/pages/single-course') }}"><h4>{{ $courses[3]->course_name }}</h4></a>
+										<p>{{ $courses[3]->course_description}}</p>
 										<div class="text-button">
-											<a href="single-course.html">view more<i class="fa fa-arrow-right"></i></a>
+											<a href="{{ url('/front/pages/single-course') }}">view more<i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
 								<div class="item course-item">
-									<a href="single-course.html"><img src="http://placehold.it/345x235" alt=""></a>
+									<a href="{{ url('/front/pages/single-course') }}"><img src="http://placehold.it/345x235" alt=""></a>
 									<div class="down-content">
-										<img src="http://placehold.it/44x44" alt="">
-										<h6>Ernest Byrd</h6>
+										<img src="{{ asset("images/" . $courses[4]->image) }}" alt="">
+										<h6>{{ $courses[4]->professor}}</h6>
 										<div class="price-red">
-											<span>$19.99</span>
+											<span>{{ $courses[4]->price}}</span>
 											<div class="base"></div>
 										</div>
-										<a href="single-course.html"><h4>How to become<br>a Powerful Speaker</h4></a>
-										<p>Ugh chambray lumbersexual food truc artisan meditation sartorial post-ironic Wes Anderson.</p>
+										<a href="{{ url('/front/pages/single-course') }}"><h4>{{ $courses[4]->course_name }}</h4></a>
+										<p>{{ $courses[4]->course_description}}</p>
 										<div class="text-button">
-											<a href="single-course.html">view more<i class="fa fa-arrow-right"></i></a>
+											<a href="{{ url('/front/pages/single-course') }}">view more<i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
 								<div class="item course-item">
-									<a href="single-course.html"><img src="http://placehold.it/345x235" alt=""></a>
+									<a href="{{ url('/front/pages/single-course') }}"><img src="http://placehold.it/345x235" alt=""></a>
 									<div class="down-content">
-										<img src="http://placehold.it/44x44" alt="">
-										<h6>Ernest Byrd</h6>
-										<div class="price-yellow">
-											<span>Free</span>
-											<div class="base"></div>
-										</div>
-										<a href="single-course.html"><h4>How to become<br>a Powerful Speaker</h4></a>
-										<p>Ugh chambray lumbersexual food truc artisan meditation sartorial post-ironic Wes Anderson.</p>
-										<div class="text-button">
-											<a href="single-course.html">view more<i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
-								</div>
-								<div class="item course-item">
-									<a href="single-course.html"><img src="http://placehold.it/345x235" alt=""></a>
-									<div class="down-content">
-										<img src="http://placehold.it/44x44" alt="">
-										<h6>Ernest Byrd</h6>
-										<div class="price-yellow">
-											<span>Free</span>
-											<div class="base"></div>
-										</div>
-										<a href="single-course.html"><h4>What can you do<br>With a Business Degree?</h4></a>
-										<p>Ugh chambray lumbersexual food truc artisan meditation sartorial post-ironic Wes Anderson.</p>
-										<div class="text-button">
-											<a href="single-course.html">view more<i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
-								</div>
-								<div class="item course-item">
-									<a href="single-course.html"><img src="http://placehold.it/345x235" alt=""></a>
-									<div class="down-content">
-										<img src="http://placehold.it/44x44" alt="">
-										<h6>Ernest Byrd</h6>
+										<img src="{{ asset("images/" . $courses[5]->image) }}" alt="">
+										<h6>{{ $courses[5]->professor}}</h6>
 										<div class="price-red">
-											<span>$29.99</span>
+											<span>{{ $courses[5]->price}}</span>
 											<div class="base"></div>
 										</div>
-										<a href="single-course.html"><h4>Fashion buying<br>and Product Management</h4></a>
-										<p>Ugh chambray lumbersexual food truc artisan meditation sartorial post-ironic Wes Anderson.</p>
+										<a href="{{ url('/front/pages/single-course') }}"><h4>{{ $courses[5]->course_name }}</h4></a>
+										<p>{{ $courses[5]->course_description}}</p>
 										<div class="text-button">
-											<a href="single-course.html">view more<i class="fa fa-arrow-right"></i></a>
+											<a href="{{ url('/front/pages/single-course') }}">view more<i class="fa fa-arrow-right"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="item course-item">
+									<a href="{{ url('/front/pages/single-course') }}"><img src="http://placehold.it/345x235" alt=""></a>
+									<div class="down-content">
+										<img src="{{ asset("images/" . $courses[6]->image) }}" alt="">
+										<h6>{{ $courses[6]->professor}}</h6>
+										<div class="price-red">
+											<span>{{ $courses[6]->price}}</span>
+											<div class="base"></div>
+										</div>
+										<a href="{{ url('/front/pages/single-course') }}"><h4>{{ $courses[6]->course_name }}</h4></a>
+										<p>{{ $courses[6]->course_description}}</p>
+										<div class="text-button">
+											<a href="{{ url('/front/pages/single-course') }}">view more<i class="fa fa-arrow-right"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="item course-item">
+									<a href="{{ url('/front/pages/single-course') }}"><img src="http://placehold.it/345x235" alt=""></a>
+									<div class="down-content">
+										<img src="{{ asset("images/" . $courses[7]->image) }}" alt="">
+										<h6>{{ $courses[7]->professor}}</h6>
+										<div class="price-red">
+											<span>{{ $courses[7]->price}}</span>
+											<div class="base"></div>
+										</div>
+										<a href="{{ url('/front/pages/single-course') }}"><h4>{{ $courses[7]->course_name }}</h4></a>
+										<p>{{ $courses[7]->course_description}}</p>
+										<div class="text-button">
+											<a href="{{ url('/front/pages/single-course') }}">view more<i class="fa fa-arrow-right"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="item course-item">
+									<a href="{{ url('/front/pages/single-course') }}"><img src="http://placehold.it/345x235" alt=""></a>
+									<div class="down-content">
+										<img src="{{ asset("images/" . $courses[8]->image) }}" alt="">
+										<h6>{{ $courses[8]->professor}}</h6>
+										<div class="price-red">
+											<span>{{ $courses[8]->price}}</span>
+											<div class="base"></div>
+										</div>
+										<a href="{{ url('/front/pages/single-course') }}"><h4>{{ $courses[8]->course_name }}</h4></a>
+										<p>{{ $courses[8]->course_description}}</p>
+										<div class="text-button">
+											<a href="{{ url('/front/pages/single-course') }}">view more<i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					
 				</section>
 
 				<!-- Courses (end) -->

@@ -9,7 +9,8 @@ use App\Models\Service;
 use App\Models\Testimonial;
 use App\Models\User;
 use App\Models\Banner;
-
+use App\Models\Course;
+use App\Models\Teacher;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +27,9 @@ Route::get('/', function () {
     $testimonials = Testimonial::all();
     $users = User::all();
     $banners = Banner::all();
-    return view('welcome', compact("services","testimonials","users","banners"));
+    $courses = Course::all();
+    $teachers = Teacher::all();
+    return view('welcome', compact("services","testimonials","users","banners","courses","teachers"));
 });
 
 
