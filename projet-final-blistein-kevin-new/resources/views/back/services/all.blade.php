@@ -32,21 +32,21 @@
                 @foreach ($services as $item)
                     <tr>
                         <th scope='row'>{{ $item->id }}</th>
-                        <td><img src="{{ "/images/" . $item->icone }}" alt=""></td>
+                        <td><i class="{{ $item->icone }}"></i></td>
                         <td>{!! $item->title !!}</td>
                         <td>{{ $item->description }}</td>
                         <td> {{-- all_td_anchor --}}
                             <div class='d-flex'>
-                                @can('delete', $item)
+                                <!-- @can('delete', $item) -->
                                 <form action="{{ route('services.destroy', $item->id) }}" method="POST">
-                                    @csrf
+                                    <!-- @csrf -->
                                     <button class="btn btncus2 ">Delete</button>
                                 </form>
-                                @endcan
-                                @can('update', $item)
-                                <a class='btn btncus3 mx-2' href='{{ route('services.edit', $item ) }}' role='button'>Edit</a>
-                                @endcan
-                                <a class='btn btncus3' href='{{ route('services.show', $item ) }}' role='button'>Read</a>
+                                <!-- @endcan
+                                @can('update', $item) -->
+                                <a class='btn btncus3 mx-2' href='{{ route('services.edit', $item->id ) }}' role='button'>Edit</a>
+                                <!-- @endcan -->
+                                <a class='btn btncus3' href='{{ route('services.read', $item->id ) }}' role='button'>Read</a>
                             </div>
                         </td>
                     </tr>

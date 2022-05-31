@@ -28,7 +28,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view("users.create");
+        $users = User::all();
+        return view("/back/users/create",compact("users"));
     }
 
     /**
@@ -67,9 +68,10 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function read(User $user)
     {
-        //
+        $users = User::all();
+        return view("/back/users/read",compact("users"));
     }
 
     /**

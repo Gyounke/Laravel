@@ -10,14 +10,14 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-12 col-md-6 order-md-1 order-last">
-                    <h3>Create Service</h3>
+                    <h3>Create Teacher</h3>
                     <p class="text-subtitle text-muted">For user to check they list</p>
                 </div>
                 <div class="col-12 col-md-6 order-md-2 order-first">
                     <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Create Service</li>
+                            <li class="breadcrumb-item active" aria-current="page">Create teacher</li>
                         </ol>
                     </nav>
                 </div>
@@ -40,28 +40,28 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body">
-                            <form class="form form-vertical" action="{{ route('users.store') }}" method="post"
+                            <form class="form form-vertical" action="{{ route('teachers.store') }}" method="post"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-body">
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-2">
                                             <div class="form-group">
-                                                <label class="mb-2">Icone</label>
+                                                <label class="mb-2">Name</label>
                                                 <input type="text" class="form-control "
-                                                    name="icone">
+                                                    name="image">
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-2">
                                             <div class="form-group">
-                                                <label class="mb-2">Title</label>
-                                                <input type="text" class="form-control" name="title">
+                                                <label class="mb-2">Field</label>
+                                                <input type="text" class="form-control" name="professor">
                                             </div>
                                         </div>
 
-                                        <div class="col-6">
+                                        <div class="col-2">
                                             <div class="form-group">
-                                                <label class="mb-2">description</label>
+                                                <label class="mb-2">Description</label>
                                                 <input type="number" class="form-control" name="description">
                                             </div>
                                         </div>

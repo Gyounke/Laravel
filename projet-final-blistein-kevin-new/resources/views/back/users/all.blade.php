@@ -50,9 +50,9 @@
                                 </form>
                                 @endcan
                                 @can('update', $item)
-                                <a class='btn btncus3 mx-2' href='{{ route('users.edit', $item ) }}' role='button'>Edit</a>
+                                <a class='btn btncus3 mx-2' href='{{ route('users.edit', $item->id ) }}' role='button'>Edit</a>
                                 @endcan
-                                <a class='btn btncus3' href='{{ route('users.show', $item ) }}' role='button'>Read</a>
+                                <a class='btn btncus3' href='{{ route('users.read', $item->id ) }}' role='button'>Read</a>
                             </div>
                         </td>
                     </tr>

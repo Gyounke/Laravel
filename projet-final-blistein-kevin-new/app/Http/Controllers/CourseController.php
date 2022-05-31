@@ -20,6 +20,17 @@ class CourseController extends Controller
         $courses = Course::all();
         return view("/back/courses/all",compact("courses"));
     }
+
+     /**
+     * Show the form for creating a new resource.
+     * @param  \Illuminate\Http\Request
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $course = Course::all();
+        return view("back/courses/create",compact("course"));
+    }
     public function read($id)
     {
         $courses = Course::find($id);

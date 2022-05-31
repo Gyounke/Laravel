@@ -6,10 +6,10 @@
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <link rel='stylesheet' href='{{ asset('css/app2.css') }}'>
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{{ asset("css/font-awesome.min.css") }}">
+    <!-- <link rel="stylesheet" href="{{ asset("css/font-awesome.min.css") }}">
     <link rel="stylesheet" href="{{ asset("css/educa.css") }}">
     <link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}">
-    <link rel="stylesheet" href="{{ asset("css/animate.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/animate.css") }}"> -->
 
     <link rel="stylesheet" href="{{ asset("css/fontawesome.css") }}">
     <link rel="stylesheet" href="{{ asset("css/templatemo-eduwell-style.css") }}">

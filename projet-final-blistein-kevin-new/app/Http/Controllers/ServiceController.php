@@ -20,10 +20,44 @@ class ServiceController extends Controller
         $services = Service::all();
         return view("/back/services/all",compact("services"));
     }
+
+       /**
+     * Show the form for creating a new resource.
+     * @param  \Illuminate\Http\Request
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $service = Service::all();
+        return view("back/services/create",compact("service"));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+            "icone" => "required|max:255",
+            "title" => "required|max:255",
+            "description" => "required|max:255",
+        ]);
+
+        $service = new Service;
+        $service->icone = $request->icone;
+        $service->title = $request->title;
+        $service->description = $request->description;
+        $service->save();
+
+        return redirect()->route("services.index")->with("success", "User has been created !");
+    }
     public function read($id)
     {
         $services = Service::find($id);
-        return view("/back/services/read",compact("services"));
+        return view("back/services/read",compact("services"));
     }
     public function edit($id)
     {
