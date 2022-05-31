@@ -23,18 +23,20 @@
             <thead>
                 <tr>
                     <th scope='col'>#</th>
-                    <th scope='col'>Icon</th>
-                    <th scope='col'>Title</th>
-                    <th scope='col'>Description</th>
+                    <th scope='col'>Name</th>
+                    <th scope='col'>Job</th>
+                    <th scope='col'>Image</th>
+                    <th scope='col'>Text</th>
                 </tr> {{-- all_tr_anchor --}}
             </thead>
             <tbody>
                 @foreach ($testimonials as $item)
                     <tr>
                         <th scope='row'>{{ $item->id }}</th>
-                        <td><img src="{{ "/images/" . $item->icon }}" alt=""></td>
-                        <td>{!! $item->title !!}</td>
-                        <td>{{ $item->description }}</td>
+                        <td>{{ $item->name }}</td>
+                        <td>{{ $item->job }}</td>
+                        <td><img src="{{ "images/" . $item->image }}" alt=""></td>
+                        <td>{{ $item->text }}</td>
                         <td> {{-- all_td_anchor --}}
                             <div class='d-flex'>
                                 @can('delete', $item)

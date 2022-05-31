@@ -6,6 +6,7 @@ use App\Http\Controllers\TestimonialController;
 use App\http\Controllers\UserController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\TeacherController;
 
 use App\Models\Service;
 use App\Models\Testimonial;
@@ -154,6 +155,15 @@ route::middleware(['auth'])->group(function () {
     Route::get('/back/banners/{id}/read', [BannerController::class, 'read'])->name('banners.read');
     Route::get('/back/banners/{id}/edit', [BannerController::class, 'edit'])->name('banners.edit');
     Route::post('/back/banners/{id}/update', [BannerController::class, 'update'])->name('banners.update');
+
+    // Teachers
+    Route::get('/back/teachers', [TeacherController::class, 'index'])->name('teachers.index');
+    Route::get('/back/teachers/{id}/read', [TeacherController::class, 'read'])->name('teachers.read');
+    Route::get('/back/teachers/{id}/edit', [TeacherController::class, 'edit'])->name('teachers.edit');
+    Route::post('/back/teachers/{id}/update', [TeacherController::class, 'update'])->name('teachers.update');
+    Route::get('/back/teachers/create', [TeacherController::class, 'create'])->name('teachers.create');
+    Route::post('/back/teachers/store', [TeacherController::class, 'store'])->name('teachers.store');
+    Route::get('/back/teachers/{id}/show', [TeacherController::class, 'show'])->name('teachers.show');
 
 });
 

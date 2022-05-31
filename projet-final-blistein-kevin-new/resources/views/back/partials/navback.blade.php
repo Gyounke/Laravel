@@ -59,9 +59,17 @@
       <a href="{{ route('courses.index') }}">
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Courses</span>
-       </a>
+         </a>
        <span class="tooltip">Courses</span>
      </li>
+      <li>
+      <a href="{{ route('teachers.index') }}">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Teachers</span>
+       </a>
+       <span class="tooltip">Teachers</span>
+     </li>
+      
      <li>
       <a href="{{ route('banners.index') }}">
          <i class='bx bx-pie-chart-alt-2' ></i>

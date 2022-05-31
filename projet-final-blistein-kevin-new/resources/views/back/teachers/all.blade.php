@@ -29,27 +29,25 @@
                 </tr> {{-- all_tr_anchor --}}
             </thead>
             <tbody>
-                @foreach ($users as $item)
+                @foreach ($teachers as $item)
                     <tr>
                         <th scope='row'>{{ $item->id }}</th>
                         <td><img src="{{ "/images/" . $item->icon }}" alt=""></td>
-                        <td>{!! $item->lastname !!}</td>
-                        <td>{{ $item->firstname }}</td>
-                        <td>{{ $item->age }}</td>
-                        <td>{{ $item->address }}</td>
-                        <td>{{ $item->email }}</td>
+                        <td>{!! $item->name !!}</td>
+                        <td>{{ $item->field }}</td>
+                        <td>{{ $item->description }}</td>
                         <td> {{-- all_td_anchor --}}
                             <div class='d-flex'>
                                 @can('delete', $item)
-                                <form action="{{ route('users.destroy', $item->id) }}" method="POST">
+                                <form action="{{ route('teachers.destroy', $item->id) }}" method="POST">
                                     @csrf
                                     <button class="btn btncus2 ">Delete</button>
                                 </form>
                                 @endcan
                                 @can('update', $item)
-                                <a class='btn btncus3 mx-2' href='{{ route('users.edit', $item ) }}' role='button'>Edit</a>
+                                <a class='btn btncus3 mx-2' href='{{ route('teachers.edit', $item ) }}' role='button'>Edit</a>
                                 @endcan
-                                <a class='btn btncus3' href='{{ route('users.show', $item ) }}' role='button'>Read</a>
+                                <a class='btn btncus3' href='{{ route('teachers.show', $item ) }}' role='button'>Read</a>
                             </div>
                         </td>
                     </tr>
