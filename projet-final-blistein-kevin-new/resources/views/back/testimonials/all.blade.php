@@ -35,7 +35,7 @@
                         <th scope='row'>{{ $item->id }}</th>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->job }}</td>
-                        <td><img src="{{ "images/" . $item->image }}" alt=""></td>
+                        <td><img src="{{ "/images/" . $item->image }}" alt=""></td>
                         <td>{{ $item->text }}</td>
                         <td> {{-- all_td_anchor --}}
                             <div class='d-flex'>

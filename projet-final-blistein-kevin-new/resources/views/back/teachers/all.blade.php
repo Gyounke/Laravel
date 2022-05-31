@@ -32,7 +32,6 @@
                 @foreach ($teachers as $item)
                     <tr>
                         <th scope='row'>{{ $item->id }}</th>
-                        <td><img src="{{ "/images/" . $item->icon }}" alt=""></td>
                         <td>{!! $item->name !!}</td>
                         <td>{{ $item->field }}</td>
                         <td>{{ $item->description }}</td>

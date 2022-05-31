@@ -23,8 +23,8 @@
             <thead>
                 <tr>
                     <th scope='col'>#</th>
-                    <th scope='col'>Professor</th>
                     <th scope='col'>Image</th>
+                    <th scope='col'>Professor</th>
                     <th scope='col'>Price</th>
                     <th scope='col'>Course name</th>
                     <th scope='col'>Course description</th>
@@ -36,7 +36,6 @@
                         <th scope='row'>{{ $item->id }}</th>
                         <td><img src="{{ "/images/" . $item->image }}" alt=""></td>
                         <td>{!! $item->professor !!}</td>
-                        <td>{{ $item->image }}</td>
                         <td>{{ $item->price }}</td>
                         <td>{{ $item->course_name }}</td>
                         <td>{{ $item->course_description }}</td>
